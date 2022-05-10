@@ -1,0 +1,24 @@
+version: "3.3"
+services: 
+  backend:
+    image: 'backend:${TAG-latest}'
+    container_name: backend
+    env_file:
+      - .env
+    environment:
+      - SERVER_NAME=localhost
+      - SERVER_HOST=https://localhost
+    command: sh -c "uvicorn app.main:app --host 0.0.0.0 --reload"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+      args:
+        INSTALL_DEV: ${INSTALL_DEV-false}
+
+volumes:
+  backend_data:
+  
