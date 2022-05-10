@@ -4,13 +4,16 @@ from app.core.config import settings
 
 from  .news import NEWS_API_MAPPING
 from .reddit import REDDIT_API_MAPPING
+from .sample import API_MAPPING
 from .cache import timed_lru_cache
 
 
 # Register your API in this API-COLLECTION
 API_COLLECTIONS = [
     REDDIT_API_MAPPING,
-    NEWS_API_MAPPING
+    NEWS_API_MAPPING,
+    #API_MAPPING
+
 ]
 
 

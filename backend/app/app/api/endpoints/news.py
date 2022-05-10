@@ -22,7 +22,7 @@ async def list_news(q: str = None, limit: int = 10) -> List[APIResponse]:
         else:
             # call news listing endpoint
             result = get_news(limit)
-
+    
         return result
     except Exception as e:
         print(str(e))
