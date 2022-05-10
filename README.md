@@ -4,7 +4,7 @@ News Aggregator is an app you can use to obtain and aggregate news from your fav
 
 News Aggregator currently connects to Reddit API and NewsAPI to aggegrate news, there is an interface of course to include any other providers.
 
-Modify the sample parse function in ./backend/app/app/deps/sample, uncomment the API_MAPPING in the API_COLLECTION list in ./backend/app/app/deps/collection
+Modify the sample parse function in ./backend/app/app/deps/sample and uncomment the API_MAPPING in the API_COLLECTION list in ./backend/app/app/deps/collection to add in another provider.
 
 ## Backend Requirements
 
